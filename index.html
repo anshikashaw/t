@@ -11,7 +11,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		var parallax1 = document.getElementById('fixed-bg');
+var section = document.getElementsByClassName('section');
+var sectionGap = document.getElementsByClassName('addPadding');
+var h = window.innerHeight;
+
+parallax1.style.height = h+"px"; 
+
+for (var i = 0; i < section.length; i++) {
+  section[i].style.height =  h+"px";
+}	
+
+for (var i = 0; i < sectionGap.length; i++) {
+	sectionGap[i].style.marginBottom =  h+"px";
+}
+	</script>
   <style>
+	  #content {
+	position: relative;
+}
+
+#content .section {
+	height: 500px;
+	width: 100%;
+	background: rgba(255,255,255, 0.8);
+}
   @font-face{
 
 font-family: 'Roboto', sans-serif;
@@ -323,6 +348,11 @@ html{
 			</div>
 		</div>
 		<div id="Workshop" class="parallax"></div>
+	<div id="content">
+	<div class="section addPadding"></div>
+	<div class="section addPadding"></div>
+	<div class="section"></div>
+</div>
 		<div  class="container text-center">
 		<div class="row">
 			<h1><center>Workshops</center></h1>
